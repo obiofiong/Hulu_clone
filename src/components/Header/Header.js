@@ -27,6 +27,9 @@ function Header() {
 		setSearch(e.target.value);
 	};
 	const handleSearch = () => {
+		if (search === "") {
+			return;
+		}
 		history.push(`/search_for/${search}`);
 		setSearch("");
 	};
@@ -37,7 +40,7 @@ function Header() {
 					<HeaderItem key={item.title} title={item.title} Icon={item.icon} />
 				))}
 			</div>
-			<div className="flex border-4 px-3 w-full max-w-md sm:w-48 rounded-lg sm:-mt-3 mb-4 mx-8 ">
+			<div className="flex border-2 px-3 w-full max-w-md sm:w-48 rounded-lg sm:-mt-3 mb-4 mx-8 ">
 				<input
 					onChange={handleInputChange}
 					value={search}

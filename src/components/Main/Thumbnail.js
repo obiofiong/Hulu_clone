@@ -6,9 +6,9 @@ function Thumbnail({ data }) {
 	return (
 		<div className="p-2 group cursor-pointer transition duration-200 ease-in transform sm:hover:scale-105 hover:z-50">
 			<div className="relative">
-				<div className=" relative absolute w-full h-full hidden group-hover:block">
-					<p className = "absolute z-20 text-black p-4">{data.overview}</p>
-					<p className="absolute z-10 bottom-0 w-full h-full bg-white opacity-80 "></p>
+				<div className=" absolute w-full h-full hidden group-hover:block">
+					<div className = "absolute z-20 text-black text-sm p-4 h-full">{data.overview.slice(0,330)} </div>
+					<p className="absolute z-10 bottom-0 w-full h-full bg-white opacity-50 "></p>
 				</div>
 				<img
 					className="h-auto"
