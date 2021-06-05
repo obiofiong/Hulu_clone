@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Hulu_clone/static/css/main.ed16a659.chunk.css",
+    "main.js": "/Hulu_clone/static/js/main.841020e0.chunk.js",
+    "main.js.map": "/Hulu_clone/static/js/main.841020e0.chunk.js.map",
+    "runtime-main.js": "/Hulu_clone/static/js/runtime-main.d9b604c4.js",
+    "runtime-main.js.map": "/Hulu_clone/static/js/runtime-main.d9b604c4.js.map",
+    "static/js/2.011ef7f4.chunk.js": "/Hulu_clone/static/js/2.011ef7f4.chunk.js",
+    "static/js/2.011ef7f4.chunk.js.map": "/Hulu_clone/static/js/2.011ef7f4.chunk.js.map",
+    "static/js/3.90aa3eb9.chunk.js": "/Hulu_clone/static/js/3.90aa3eb9.chunk.js",
+    "static/js/3.90aa3eb9.chunk.js.map": "/Hulu_clone/static/js/3.90aa3eb9.chunk.js.map",
+    "index.html": "/Hulu_clone/index.html",
+    "static/css/main.ed16a659.chunk.css.map": "/Hulu_clone/static/css/main.ed16a659.chunk.css.map",
+    "static/js/2.011ef7f4.chunk.js.LICENSE.txt": "/Hulu_clone/static/js/2.011ef7f4.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d9b604c4.js",
+    "static/js/2.011ef7f4.chunk.js",
+    "static/css/main.ed16a659.chunk.css",
+    "static/js/main.841020e0.chunk.js"
+  ]
+}
