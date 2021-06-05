@@ -1,6 +1,6 @@
 # Hulu Clone
 
-This project was bootstrapped with [Create React App].
+This project was created with REACT JS, TAILWINDCSS and TMDB api
 
 ## To view Site, Click here [https://obiofiong.github.io/Hulu_clone/](https://obiofiong.github.io/Hulu_clone/)
 
