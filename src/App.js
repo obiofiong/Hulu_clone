@@ -4,12 +4,13 @@ import Nav from "./components/Navbar/Nav";
 import Main from "./components/Main/Main";
 import { Route, Switch, Redirect } from "react-router-dom";
 import Search from "./components/SearchResult/Search";
+import Footer from "./components/Footer/Footer";
 import Results from "./components/Results/Results";
 
 function App() {
 	return (
 		<div className="">
-			<div className="sticky-0">
+			<div className="">
 				<Header />
 				<Nav />
 			</div>
@@ -20,6 +21,7 @@ function App() {
 				<Redirect from="/" to="/genre/fetchTrending" />
 				{/* <Redirect to="/pagenotfound" /> */}
 			</Switch>
+			<Footer/>
 		</div>
 	);
 }

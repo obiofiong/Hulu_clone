@@ -44,6 +44,7 @@ function Header() {
 				<input
 					onChange={handleInputChange}
 					value={search}
+					placeholder = "search a movie"
 					type="text"
 					className=" bg-transparent appearance-none rounded w-full leading-tight focus:outline-none focus:shadow-outline"
 				/>

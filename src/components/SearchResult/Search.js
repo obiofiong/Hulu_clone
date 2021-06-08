@@ -23,8 +23,9 @@ function Search(props) {
 	}, [id]);
 
 	return (
-		<div className="px-5 my-10 sm:grid md:grid-cols-2 xl:grid-cols-3  3xl:flex flex-wrap justify-center">
-			<h1 className="mx-auto">Showing results for <span className="font-bold">{id}</span> </h1>
+		<>
+			<h1 className="mt-8 mx-auto">Showing results for <span className="font-bold">{id}</span> </h1>
+			<div className="px-5 my-10 sm:grid md:grid-cols-2 xl:grid-cols-3  3xl:flex flex-wrap justify-center">
 			{" "}
 			{appState.fetching ? (
 				<h1 className="mx-auto">Loading movies...</h1>
@@ -34,6 +35,7 @@ function Search(props) {
 				))
 			)}
 		</div>
+		</>
 	);
 }
 
