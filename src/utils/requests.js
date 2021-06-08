@@ -49,5 +49,5 @@ export const requests = {
 };
 
 export const search = {
-	url : `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=`
+	url : `/search/movie?api_key=${API_KEY}&query=`
 }

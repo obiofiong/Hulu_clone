@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { search } from "../.././utils/requests";
-import Thumbnail from "../Main/Thumbnail";
+import Thumbnail from "../Results/Thumbnail";
 
 
 function Search(props) {

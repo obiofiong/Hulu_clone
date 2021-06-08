@@ -26,12 +26,13 @@ function Header() {
 	const handleInputChange = (e) => {
 		setSearch(e.target.value);
 	};
-	const handleSearch = () => {
+	const handleSearch = (e) => {
+		e.preventDefault()
 		if (search === "") {
 			return;
 		}
 		history.push(`/search_for/${search}`);
-		setSearch("");
+		// setSearch("");
 	};
 	return (
 		<div className="flex flex-col items-center sm:flex-row sm:justify-between m-5 h-auto">
@@ -40,11 +41,11 @@ function Header() {
 					<HeaderItem key={item.title} title={item.title} Icon={item.icon} />
 				))}
 			</div>
-			<div className="flex border-2 px-3 w-full max-w-md sm:w-48 rounded-lg sm:-mt-3 mb-4 mx-8 ">
+			<form onSubmit = {handleSearch} className="flex border-2 px-3 w-full max-w-md sm:w-48 rounded-lg sm:-mt-3 mb-4 mx-8 ">
 				<input
 					onChange={handleInputChange}
 					value={search}
-					placeholder = "search a movie"
+					placeholder = "Search a movie"
 					type="text"
 					className=" bg-transparent appearance-none rounded w-full leading-tight focus:outline-none focus:shadow-outline"
 				/>
@@ -52,7 +53,7 @@ function Header() {
 					onClick={handleSearch}
 					className="ml-2 h-10 cursor-pointer hover:text-white hover:shadow-md"
 				/>
-			</div>
+			</form>
 
 			<img className="h-6  sm:mb-6" src={huluLogo} alt="logo" />
 			{/* <h1 className="font-bold text-xl tracking-widest text-white">hulu</h1> */}

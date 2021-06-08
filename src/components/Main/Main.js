@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import {requests} from "../.././utils/requests";
-import Thumbnail from "./Thumbnail";
+import Thumbnail from "../Results/Thumbnail";
 
 function Main(props) {
 	const { id } = props.match.params;

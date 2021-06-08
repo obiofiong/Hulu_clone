@@ -1,37 +1,43 @@
 import React, { useState, useEffect } from "react";
 import { requests } from "../.././utils/requests";
-// import Thumbnail from "./Thumbnail";
+import { search } from "../.././utils/requests";
+import Thumbnail from "./Thumbnail"
 
 function Results({ match }) {
-	const { id } = match.params;
+	const { id, param } = match.params;
+	console.log(match,id)
 	const [appState, setAppState] = useState({
 		fetching: false,
 		data: [],
 	});
-	let renderOption = "";
 
-		const renderOptionChoice = () => {
-			if (id.slice(0, 5) === "genre") {
-				renderOption = id.substr(7);
-                		console.log(renderOption);
-			} else if (id.slice(0, 13)) {
-				renderOption = id.substr(13);
-			}
-		};
-		renderOptionChoice();
 	useEffect(() => {
-		// const fetchData = async () => {
-		// 	const result = await fetch(
-		// 		`https://api.themoviedb.org/3${requests[renderOption].url}`
-		// 	);
-		// 	const json = await result.json();
-		// 	setAppState({ fetching: false, data: json.results });
-		// 	// setFetching(false)
-		// };
-		// fetchData();
-	}, [id]);
+			const fetchData = async () => {
+			const result = await fetch(
+				`https://api.themoviedb.org/3${ (id === "genre") ? 	requests[param].url : search.url+param}`
+			);
+			const json = await result.json();
+			setAppState({ fetching: false, data: json.results });
+		};
+		
+		fetchData();
+	}, [id,param]);
 
-	return <div></div>;
+	return(
+		<>
+		{ (id === "search_for") &&  <h1 className="mt-8 mx-auto">Showing results for <span className="font-bold">{param}</span> </h1> }
+		<div className="px-5 my-10 sm:grid md:grid-cols-2 xl:grid-cols-3  3xl:flex flex-wrap justify-center">
+			{" "}
+			{appState.fetching ? (
+				<h1 className="mx-auto">Loading movies...</h1>
+			) : (
+				appState.data.map((singleThumbnail) => (
+					<Thumbnail key={singleThumbnail.id} data={singleThumbnail} />
+				))
+			)}
+		</div>
+		</>
+	);
 }
 
 export default Results;
